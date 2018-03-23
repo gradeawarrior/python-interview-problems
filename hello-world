@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+import project
+
+print("Hello World v%s" % project.__version__)
