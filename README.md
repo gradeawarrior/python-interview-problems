@@ -6,7 +6,7 @@ This is a very basic Python egg for developing both projects and tests. Right no
 
 This project is primarily used for test development of common interview questions. The implementation for these questions can be found under the ```project``` directory. This is the equivalent of the ```src``` directory.
 
-Unittests are written for the code, and can be funder under the ```tests``` directory. Assuming you have all dependencies installed, you can execute all the unittests via:
+Unittests are written for the code, and can be found under under the ```tests``` directory. Assuming that you have all dependencies installed, you can execute all the unittests via:
 
 	$ make test
 	
@@ -57,20 +57,42 @@ Once installed, you can see a list of make targets via ```make list```:
 	init: setup.venv
 	setup.venv:
 	delete.venv:
+	list.tests:
 	test: init
+	test.file: init
 	coverage: init
 	ci: init
-	generate.egg:
+	generate.egg: clean
 	install.egg:
 	publish.test:
 	publish:
 	clean:
-	clean.all: clean
+	clean.all: clean delete.venv
 	list:
 
 To run tests, simply execute:
 
 	$ make test
+	
+To list out all tests:
+
+	$ make list.tests
+	****************
+	> list.tests
+	****************
+	# This will list all tests in the tests directory
+	find tests -type f -name *test*.py
+	tests/fibonacci_test.py
+	tests/longest_substring_test.py
+	tests/min_window_substring_test.py
+	tests/move_zeroes_test.py
+	tests/smallest_possible_integer_test.py
+	tests/tintri_screening_test.py
+	tests/two_sums_bst_test.py
+
+To run a specific test:
+
+	make test.file FILE=tests/fibonacci_test.py
 	
 To clean your project:
 

@@ -1,0 +1,3 @@
+import project
+
+debug = False

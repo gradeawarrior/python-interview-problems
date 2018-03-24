@@ -16,7 +16,14 @@ delete.venv:
 	$(info ****************)
 	$(info > delete:venv)
 	$(info ****************)
-	rm -rf $(VIRTUALENV)
+	rm -rf venv*
+
+list.tests:
+	# This will list all tests in the tests directory
+	$(info ****************)
+	$(info > list.tests)
+	$(info ****************)
+	find tests -type f -name *test*.py
 
 test: init
 	# This runs all of the tests. To run an individual test, run py.test with
@@ -26,6 +33,14 @@ test: init
 	$(info ****************)
 	source $(VIRTUALENV)/bin/activate; py.test tests -lvs
 
+test.file: init
+	# This runs a specific test. Specify FILE=tests/<file_name> in addition to this
+	# target to execute a specific test.
+	$(info ****************)
+	$(info > test.file)
+	$(info ****************)
+	source $(VIRTUALENV)/bin/activate; py.test $(FILE) -lvs
+
 coverage: init
 	$(info ****************)
 	$(info > coverage)
@@ -33,6 +48,7 @@ coverage: init
 	source $(VIRTUALENV)/bin/activate; py.test --verbose --cov-report term --cov=requests tests
 
 ci: init
+	# Used for executing on Jenkins and automatically generating a junit.xml output
 	$(info ****************)
 	$(info > ci)
 	$(info ****************)
@@ -61,10 +77,15 @@ publish:
 	rm -rf build dist .egg project.egg-info
 
 clean:
+	$(info ****************)
+	$(info > clean)
+	$(info ****************)
 	rm -rf build dist .egg project.egg-info
 
-clean.all: clean
-	rm -rf venv*
+clean.all: clean delete.venv
+	$(info ****************)
+	$(info > clean.all)
+	$(info ****************)
 	find . -name __pycache__ | xargs rm -rf
 	find . -name *.pyc | xargs rm -f
 
