@@ -24,9 +24,10 @@ class Solution(object):
         :rtype: str
         """
         if len(s) > 1000: raise ValueError("The string cannot be more than 1000 chars")
-        if len(s) < 2: return ""
+        if not s: return ""
+        if len(s) == 1: return s
 
-        longest = ""
+        longest = s[0]
         idx1, idx2 = 0, 1
 
         while idx1 < len(s)-1:
@@ -42,7 +43,7 @@ class Solution(object):
                 if config.debug:
                     print("(%s:%s:%s) current: '%s' potential: '%s' - reverse: '%s' - tail: '%s'"
                             % (idx1, middle, idx2, current, potential, reverse, current_tail))
-                if current_tail == reverse and current > longest:
+                if current_tail == reverse and len(current) > len(longest):
                     if config.debug: print("New longest: '%s'" % current)
                     longest = current
                 idx2 += 1
