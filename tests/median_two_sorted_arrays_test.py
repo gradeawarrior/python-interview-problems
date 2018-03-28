@@ -24,6 +24,7 @@ from project.median_two_sorted_arrays import Solution
 
 @pytest.mark.parametrize("test_input1, test_input2, expected", [
     ([], [], 0.0),
+    ([1], [1], 1.0),
     ([1, 3], [2], 2.0),
     ([1, 2], [3, 4], 2.5),
     ([2, 3, 4], [1], 2.5),

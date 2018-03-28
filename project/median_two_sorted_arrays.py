@@ -64,7 +64,7 @@ class Solution(object):
                     mid_idx = len(larger_l)/2 - 1
                     middle = [larger_l[mid_idx], larger_l[mid_idx+1]]
                 else:
-                    mid_idx= len(larger_l)/2
+                    mid_idx = len(larger_l)/2
                     middle = [larger_l[mid_idx]]
                 if config.debug:
                     print("list: %s - current middle: %s - number: %s" % (larger_l, middle, number))
@@ -73,10 +73,10 @@ class Solution(object):
                 if len(middle) == 1:
                     assert len(middle) == 1, "Expecting that middle has 1 number"
                     if number == middle[0]:
-                        middle = middle[middle[0], number]
+                        middle = [middle[0], number]
                         left = larger_l[0:mid_idx+1]
                         left.append(number)
-                        right = larger_l[mid_idx+1:len(larger_l)]
+                        right = larger_l[mid_idx+1:len(larger_l)] if len(larger_l) > 1 else []
                         larger_l = left + right
                     elif number < middle[0]:
                         idx = mid_idx
