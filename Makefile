@@ -25,7 +25,7 @@ list.tests:
 	$(info ****************)
 	find tests -type f -name *test*.py
 
-test: init
+test:
 	# This runs all of the tests. To run an individual test, run py.test with
 	# the -k flag, like "py.test -k test_path_is_not_double_encoded"
 	$(info ****************)
@@ -33,7 +33,7 @@ test: init
 	$(info ****************)
 	source $(VIRTUALENV)/bin/activate; py.test tests -lvs
 
-test.file: init
+test.file:
 	# This runs a specific test. Specify FILE=tests/<file_name> in addition to this
 	# target to execute a specific test.
 	$(info ****************)
