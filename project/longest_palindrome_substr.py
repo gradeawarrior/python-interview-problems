@@ -34,6 +34,7 @@ class Solution(object):
             idx2 = idx1 + 1
             if len(longest) > len(s[idx1:len(s)]): break
 
+            calculated = ""
             while idx2 < len(s):
                 current = s[idx1:idx2+1]
                 middle = len(current)/2
@@ -41,8 +42,11 @@ class Solution(object):
                 reverse = potential[::-1]
                 current_tail = current[middle:len(current)] if len(current) % 2 == 0 \
                         else current[middle+1:len(current)]
-                if len(current) % 2 == 0: calculated = potential + current[middle] + reverse
-                else:                     calculated = potential + reverse
+                # if not calculated and len(current) % 2 == 0:
+                #     calculated = current + current[1::-1]
+                # elif not calculated:
+                #     calculated = current[0:-1] + current[::-1]
+
                 if config.debug:
                     print("(%s:%s:%s) current: '%s' calculated: %s - potential: '%s' - "
                             "reverse: '%s' - tail: '%s'"
@@ -50,9 +54,9 @@ class Solution(object):
                 if current_tail == reverse and len(current) > len(longest):
                     if config.debug: print("New longest: '%s'" % current)
                     longest = current
-                elif len(calculated) > len(s)/2 and current_tail not in calculated:
-                    if config.debug: print("-- breaking early!")
-                    break
+                # elif len(calculated) > len(s):
+                #     if config.debug: print("-- breaking early. It's impossible!")
+                #     break
                 idx2 += 1
 
             if len(longest) == len(s): break

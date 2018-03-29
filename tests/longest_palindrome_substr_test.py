@@ -28,6 +28,7 @@ from time import time
     ("ab", "a"),
     ("abc", "a"),
     ("abcdd", "dd"),
+    ("aaabaaaa", "aaabaaa"),
     ("salas", "salas"),
     ("psalas", "salas"),
     ("peter salas", "salas"),
