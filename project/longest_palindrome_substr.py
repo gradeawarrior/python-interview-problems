@@ -45,7 +45,7 @@ class Solution(object):
                 if letter == mletter and letter_count[letter] < 4: continue
                 potential = mletter + letter + letter + mletter
                 if potential in s and potential not in palindromes:
-                    if len(letter) == 1: longest = potential
+                    if len(potential) > len(longest): longest = potential
                     palindromes.append(potential)
         if config.debug: print("palindromes: %s" % palindromes)
 
@@ -55,7 +55,7 @@ class Solution(object):
                 if letter == mletter and letter_count[letter] < 3: continue
                 potential = mletter + letter + mletter
                 if potential in s:
-                    if len(letter) == 1: longest = potential
+                    if len(potential) > len(longest): longest = potential
                     palindromes.append(potential)
         if config.debug: print("palindromes: %s" % palindromes)
 
@@ -98,13 +98,15 @@ class Solution(object):
                 start_idx = s.find(palindrome, start_idx)
 
         # Deal with situations when length == 3, find the first occurence
-        if len(longest) == 3:
+        if len(longest) == 3 or len(longest) == 4:
             for k in xrange(0, len(palindromes)-1):
+                if len(palindromes[k]) < len(longest): continue
                 idx1 = s.find(palindromes[k])
                 for l in xrange(1, len(palindromes)):
+                    if len(palindromes[l]) < len(longest): continue
                     idx2 = s.find(palindromes[l])
-                    if idx1 <= idx2: longest = palindromes[idx1]
-                    else:            longest = palindromes[idx2]
+                    if idx1 <= idx2: longest = palindromes[k]
+                    else:            longest = palindromes[l]
 
         if config.debug: print("longest: '%s'" % longest)
         return longest
