@@ -1,0 +1,235 @@
+****************
+> test
+****************
+# This runs all of the tests. To run an individual test, run py.test with
+# the -k flag, like "py.test -k test_path_is_not_double_encoded"
+source venv/bin/activate; py.test tests -lvs
+============================= test session starts ==============================
+platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /Users/psalas/Dev/git/python-interview-problems/venv/bin/python
+cachedir: .cache
+rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
+plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
+collecting ... collected 192 items
+
+tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[12-12] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[123-123] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[1-123] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[123-1] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[12-123] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[123-12] PASSED
+tests/add_two_numbers_test.py::test_add_two_numbers[10000-10000000] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[0-None] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[1-0] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[2-1] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[3-1] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[4-2] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[5-3] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[6-5] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[7-8] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[8-13] PASSED
+tests/fibonacci_test.py::test_fibonacci_generator[100-expected9] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[0-None] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[1-0] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[2-1] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[3-1] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[4-2] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[5-3] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[6-5] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[7-8] PASSED
+tests/fibonacci_test.py::test_fibonacci_recursive[8-13] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[None-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[a-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[aa-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[ab-False] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[1-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[2-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[3-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[10-False] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[11-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[100-False] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[101-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[1001-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[123454321-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[12345654321-True] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[123456754321-False] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[1213-False] PASSED
+tests/is_linkedlist_palindrome_test.py::test_is_palindrome[13441-False] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[-1-False] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[0-True] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[10-False] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[11-True] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[100-False] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[123454321-True] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[12345654321-True] PASSED
+tests/is_num_palindrome_test.py::test_is_palindrome[123456754321-False] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[None-False] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[-False] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[a-True] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[aa-True] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[ab-False] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[10-False] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[11-True] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[100-False] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[123454321-True] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[12345654321-True] PASSED
+tests/is_str_palindrome_test.py::test_is_palindrome[123456754321-False] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[babad-bab] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[cbbd-bb] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[-] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[a-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[ab-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[abc-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[abcdd-dd] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[aaabaaaa-aaabaaa] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[salas-salas] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[psalas-salas] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[peter salas-salas] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[abcdefghijklmnopqrstuvwxyz-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[abcdefghijklmmnopqrstuvwxyz-mm] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[abcdefghijklmnopqrstuvwxyzz-zz] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[abcdefghijklmnopqrstuvwxyzzz-zzz] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[kztakrekvefgchersuoiuatzlmwynzjhdqqftjcqmntoyckqfawikkdrnfgbwtdpbkymvwoumurjdzygyzsbmwzpcxcdmmpwzmeibligwiiqbecxwyxigikoewwrczkanwwqukszsbjukzumzladrvjefpegyicsgctdvldetuegxwihdtitqrdmygdrsweahfrepdcudvyvrggbkthztxwicyzazjyeztytwiyybqdsczozvtegodacdokczfmwqfmyuixbeeqluqcqwxpyrkpfcdosttzooykpvdykfxulttvvwnzftndvhsvpgrgdzsvfxdtzztdiswgwxzvbpsjlizlfrlgvlnwbjwbujafjaedivvgnbgwcdbzbdbprqrflfhahsvlcekeyqueyxjfetkxpapbeejoxwxlgepmxzowldsmqllpzeymakcshfzkvyykwljeltutdmrhxcbzizihzinywggzjctzasvefcxmhnusdvlderconvaisaetcdldeveeemhugipfzbhrwidcjpfrumshbdofchpgcsbkvaexfmenpsuodatxjavoszcitjewflejjmsuvyuyrkumednsfkbgvbqxfphfqeqozcnabmtedffvzwbgbzbfydiyaevoqtfmzxaujdydtjftapkpdhnbmrylcibzuqqynvnsihmyxdcrfftkuoymzoxpnashaderlosnkxbhamkkxfhwjsyehkmblhppbyspmcwuoguptliashefdklokjpggfiixozsrlwmeksmzdcvipgkwxwynzsvxnqtchgwwadqybkguscfyrbyxudzrxacoplmcqcsmkraimfwbauvytkxdnglwfuvehpxd-dtzztd] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[iptmykvjanwiihepqhzupneckpzomgvzmyoybzfynybpfybngttozprjbupciuinpzryritfmyxyppxigitnemanreexcpwscvcwddnfjswgprabdggbgcillisyoskdodzlpbltefiz-illi] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[babad-bab] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[cbbd-bb] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[-] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[a-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[ab-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[abc-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[abcdd-dd] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[aaabaaaa-aaabaaa] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[salas-salas] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[psalas-salas] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[peter salas-salas] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[abcdefghijklmnopqrstuvwxyz-a] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[abcdefghijklmmnopqrstuvwxyz-mm] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[abcdefghijklmnopqrstuvwxyzz-zz] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[abcdefghijklmnopqrstuvwxyzzz-zzz] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[kztakrekvefgchersuoiuatzlmwynzjhdqqftjcqmntoyckqfawikkdrnfgbwtdpbkymvwoumurjdzygyzsbmwzpcxcdmmpwzmeibligwiiqbecxwyxigikoewwrczkanwwqukszsbjukzumzladrvjefpegyicsgctdvldetuegxwihdtitqrdmygdrsweahfrepdcudvyvrggbkthztxwicyzazjyeztytwiyybqdsczozvtegodacdokczfmwqfmyuixbeeqluqcqwxpyrkpfcdosttzooykpvdykfxulttvvwnzftndvhsvpgrgdzsvfxdtzztdiswgwxzvbpsjlizlfrlgvlnwbjwbujafjaedivvgnbgwcdbzbdbprqrflfhahsvlcekeyqueyxjfetkxpapbeejoxwxlgepmxzowldsmqllpzeymakcshfzkvyykwljeltutdmrhxcbzizihzinywggzjctzasvefcxmhnusdvlderconvaisaetcdldeveeemhugipfzbhrwidcjpfrumshbdofchpgcsbkvaexfmenpsuodatxjavoszcitjewflejjmsuvyuyrkumednsfkbgvbqxfphfqeqozcnabmtedffvzwbgbzbfydiyaevoqtfmzxaujdydtjftapkpdhnbmrylcibzuqqynvnsihmyxdcrfftkuoymzoxpnashaderlosnkxbhamkkxfhwjsyehkmblhppbyspmcwuoguptliashefdklokjpggfiixozsrlwmeksmzdcvipgkwxwynzsvxnqtchgwwadqybkguscfyrbyxudzrxacoplmcqcsmkraimfwbauvytkxdnglwfuvehpxd-dtzztd] PASSED
+tests/longest_palindrome_substr_test.py::test_palindrome_optimized[iptmykvjanwiihepqhzupneckpzomgvzmyoybzfynybpfybngttozprjbupciuinpzryritfmyxyppxigitnemanreexcpwscvcwddnfjswgprabdggbgcillisyoskdodzlpbltefiz-illi] PASSED
+tests/longest_substring_test.py::test_longest_substring[None-0] PASSED
+tests/longest_substring_test.py::test_longest_substring[a-1] PASSED
+tests/longest_substring_test.py::test_longest_substring[ed-2] PASSED
+tests/longest_substring_test.py::test_longest_substring[ece-3] PASSED
+tests/longest_substring_test.py::test_longest_substring[eceba-3] PASSED
+tests/longest_substring_test.py::test_longest_substring[fasting-2] PASSED
+tests/longest_substring_test.py::test_longest_substring[banana-5] PASSED
+tests/longest_substring_test.py::test_longest_substring[banana bananana-7] PASSED
+tests/longest_substring_test.py::test_longest_substring[aac-3] PASSED
+tests/longest_substring_test.py::test_longest_substring[ccaabbb-5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input10-test_input20-0.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input11-test_input21-1.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input12-test_input22-2.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input13-test_input23-2.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input14-test_input24-2.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input15-test_input25-2.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input16-test_input26-2.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input17-test_input27-3.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input18-test_input28-3.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input19-test_input29-3.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input110-test_input210--2.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input111-test_input211--2.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input112-test_input212-5.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input113-test_input213-5.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input114-test_input214-5.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input115-test_input215-5.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input116-test_input216-5.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input117-test_input217-5.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input118-test_input218-5.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input119-test_input219-5.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input120-test_input220-5.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input121-test_input221-5.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input122-test_input222-5.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input123-test_input223-5.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input124-test_input224-13.0] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input125-test_input225-13.5] PASSED
+tests/median_two_sorted_arrays_test.py::test_add_two_numbers[test_input126-test_input226-13.5] PASSED
+tests/min_window_substring_test.py::test_min_window_substring[ADOBECODEBANC-ABC-BANC] PASSED
+tests/min_window_substring_test.py::test_min_window_substring[abc-bc-bc] PASSED
+tests/min_window_substring_test.py::test_min_window_substring[ab-b-b] PASSED
+tests/min_window_substring_test.py::test_min_window_substring[bba-ba-ba] PASSED
+tests/min_window_substring_test.py::test_min_window_substring[aaflslflsldkalskaaa-aaa-aaa] FAILED
+tests/min_window_substring_test.py::test_min_window_substring[acbbaca-aba-baca] PASSED
+tests/move_zeroes_test.py::test_move_zeroes[test_input0-expected0] PASSED
+tests/move_zeroes_test.py::test_move_zeroes[test_input1-expected1] PASSED
+tests/move_zeroes_test.py::test_move_zeroes[test_input2-expected2] PASSED
+tests/move_zeroes_test.py::test_move_zeroes[test_input3-expected3] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[-1234567893-0] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[-123--321] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[-12--21] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[-1--1] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[1-1] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[12-21] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[123-321] PASSED
+tests/reverse_integer_test.py::test_add_two_numbers[1234567893-0] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input0-5] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input1-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input2-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input3-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input4-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input5-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input6-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution2[test_input0-5] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution2[test_input1-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution2[test_input2-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution2[test_input3-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution2[test_input4-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution2[test_input5-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution2[test_input6-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input0-5] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input1-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input2-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input3-4] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input4-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input5-1] PASSED
+tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input6-4] PASSED
+tests/tintri_screening_test.py::test_simplefunction[foo-foo] PASSED
+tests/tintri_screening_test.py::test_simplefunction[jalsdflbvflnvfmdklsdfsdjkbd-jal sdf lbv fln vfm dkl sdf sdj kbd] PASSED
+tests/tintri_screening_test.py::test_simplefunction[foobar-foo bar] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input0-4-False] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input1-5-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input2-6-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input3-7-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input4-8-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input5-9-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input6-10-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input7-11-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input8-12-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input9-13-True] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input10-14-False] PASSED
+tests/two_sums_bst_test.py::test_two_sums[test_input11-20-False] PASSED
+tests/union_of_two_lists_test.py::test_union[test_input10-test_input20-expected0] PASSED
+tests/union_of_two_lists_test.py::test_union[test_input11-test_input21-expected1] PASSED
+
+=================================== FAILURES ===================================
+____________ test_min_window_substring[aaflslflsldkalskaaa-aaa-aaa] ____________
+
+test_string = 'aaflslflsldkalskaaa', test_chars = 'aaa', expected = 'aaa'
+
+    @pytest.mark.parametrize("test_string, test_chars, expected", [
+        ("ADOBECODEBANC", "ABC", "BANC"),
+        ("abc", "bc", "bc"),
+        ("ab", "b", "b"),
+        ("bba", "ba", "ba"),
+        ("aaflslflsldkalskaaa", "aaa", "aaa"),
+        ("acbbaca", "aba", "baca"),
+        ])
+    
+    def test_min_window_substring(test_string, test_chars, expected):
+        result = Solution().minWindow(test_string, test_chars)
+>       assert result == expected
+E       assert 'dka' == 'aaa'
+E         - dka
+E         + aaa
+
+expected   = 'aaa'
+result     = 'dka'
+test_chars = 'aaa'
+test_string = 'aaflslflsldkalskaaa'
+
+tests/min_window_substring_test.py:15: AssertionError
+===================== 1 failed, 191 passed in 1.03 seconds =====================
+make: *** [test] Error 1
