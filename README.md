@@ -58,8 +58,8 @@ Once installed, you can see a list of make targets via ```make list```:
 	setup.venv:
 	delete.venv:
 	list.tests:
-	test: init
-	test.file: init
+	test:
+	test.file:
 	coverage: init
 	ci: init
 	generate.egg: clean
@@ -69,6 +69,12 @@ Once installed, you can see a list of make targets via ```make list```:
 	clean:
 	clean.all: clean delete.venv
 	list:
+
+For a first time run, you will need to install the development requirements:
+
+	make
+
+After setting up your environment, you run any of the test commands very quickly!
 
 To run tests, simply execute:
 
