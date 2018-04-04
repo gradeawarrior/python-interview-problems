@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 235 items
+collecting ... collected 271 items
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -200,6 +200,42 @@ tests/move_zeroes_test.py::test_move_zeroes[test_input0-expected0] PASSED
 tests/move_zeroes_test.py::test_move_zeroes[test_input1-expected1] PASSED
 tests/move_zeroes_test.py::test_move_zeroes[test_input2-expected2] PASSED
 tests/move_zeroes_test.py::test_move_zeroes[test_input3-expected3] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[0-0] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[1-1] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[35-35] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[130-103] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[123-132] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[1234-1243] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[12345-15423] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[123456-162534] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[1234567-1726534] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[12345678-18237645] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[123456789-192873645] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1[1234567890-1029384756] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[0-0] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[1-1] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[35-35] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[130-103] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[123-132] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[1234-1423] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[12345-15243] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[123456-162534] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[1234567-1726354] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[12345678-18273645] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[123456789-192837465] PASSED
+tests/random_number_generator_test.py::test_random_number_solution2[1234567890-1203948576] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_different[1234] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_different[12345] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_different[1234567] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_different[12345678] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_different[123456789] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_different[1234567890] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_similarities[0] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_similarities[1] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_similarities[35] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_similarities[130] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_similarities[123] PASSED
+tests/random_number_generator_test.py::test_random_number_solution1_and_solution2_similarities[123456] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[-1234567893-0] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[-123--321] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[-12--21] PASSED
@@ -274,5 +310,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-===================== 1 failed, 234 passed in 1.19 seconds =====================
+===================== 1 failed, 270 passed in 1.20 seconds =====================
 make: *** [test] Error 1
