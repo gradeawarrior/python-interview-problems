@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 221 items
+collecting ... collected 235 items
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -35,6 +35,20 @@ tests/divide_two_ints_test.py::test_division[-2147483648--1-2147483647] PASSED
 tests/divide_two_ints_test.py::test_division[2147483648--1--2147483648] PASSED
 tests/divide_two_ints_test.py::test_division[-2147483648-1--2147483648] PASSED
 tests/divide_two_ints_test.py::test_division[2147483647-2-1073741823] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-3-715827882] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-4-536870911] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-5-429496729] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-6-357913941] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-7-306783378] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-8-268435455] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-9-238609294] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-10-214748364] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-11-195225786] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-12-178956970] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-13-165191049] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-14-153391689] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-15-143165576] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-16-134217727] PASSED
 tests/divide_two_ints_test.py::test_division_bruteforce[1-2-0] PASSED
 tests/divide_two_ints_test.py::test_division_bruteforce[2-2-1] PASSED
 tests/divide_two_ints_test.py::test_division_bruteforce[3-2-1] PASSED
@@ -260,5 +274,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-===================== 1 failed, 220 passed in 1.23 seconds =====================
+===================== 1 failed, 234 passed in 1.19 seconds =====================
 make: *** [test] Error 1

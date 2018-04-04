@@ -17,6 +17,10 @@ class Solution(object):
         :type dividend: int
         :type divisor: int
         :rtype: int
+
+        A huge thanks for to the exceptional explaination here:
+
+            https://leetcode.com/problems/divide-two-integers/discuss/13407/Detailed-Explained-8ms-C++-solution
         """
         # Exclude sign from the equation
         s = 1 if ((dividend > 0 and divisor > 0) or (dividend < 0 and divisor < 0)) else -1
@@ -25,48 +29,30 @@ class Solution(object):
 
         # Do some pre-checks to optimize on division by 0 and 1, and anything
         # where dividend < divisor
-        if dividend == 0: return 0
-        elif divisor > dividend: return 0
-        elif dividend == divisor: return 1*s
-        elif divisor == 1 and dividend < MAX_INT and dividend >= MIN_INT: return dividend*s
-        elif divisor == 1 and dividend >= MAX_INT and s > 0: return (MAX_INT-1)*s
-        elif divisor == 1 and dividend >= MAX_INT and s < 0: return (MAX_INT)*s
         if divisor == 0: raise ValueError("Cannot divide by 0!")
+        elif dividend == 0: return 0
+        elif divisor > dividend: return 0
 
-	# bitwise logic
-        cd = divisor
-        result = dividend
-        shifter = 0
-        # Keep shifting bits until 'dividend - shifted divisor' is negative
-        while result > 0:
-            cd = cd << 1
-            shifter += 1
-            result = dividend - cd
-            if config.debug:
-                print("Current number: %s - shifter: %s remainder=%s" % (cd, shifter, result))
-        # Roll back 1 since the loop went over by 1,
-        # except in situations where the difference is within divisor
-        delta = result + divisor
-        if result != 0 and (delta < 0 or delta >= divisor):
-            shifter -= 1
-            cd = cd >> 1
-
-        # Calculate remainder and how many times divisor goes into dividend based on bit-logic
-        remainder = dividend - cd
-        if result == 0  or delta < 0 or delta >= divisor: r = 1 << shifter
-        else: r = (1 << shifter) - 1
-        if config.debug:
-            print("Current answer: %s (shifter: %s) - remainder=%s" % (r, shifter, remainder))
-
-        # Calculate if divisor will go into remainder anymore
-        while  remainder > 0:
-            remainder -= divisor
-            if remainder >= 0: r += 1
-            if config.debug: print("> updated answer: %s - remainder=%s" % (r, remainder))
+        r = 0
+        while dividend >= divisor:
+            # Shift bits until > dividend
+            cd, multiplier = divisor, 1
+            while dividend >= (cd << 1):
+                cd <<= 1
+                multiplier <<= 1
+                if config.debug: print("Current number: %s - multiplier: %s" % (cd, multiplier))
+            dividend -= cd
+            r += multiplier
 
         # Add the sign back into before returning
+        r = r if s > 0 else -r
+
+        # Quickly check for overflow
+        r = r - 1 if r >= MAX_INT else r
+        r = r if r >= MIN_INT else MIN_INT
+
         if config.debug: print("Returning answer: %s" % r)
-        return r*s
+        return r
 
     def divide_bruteforce(self, dividend, divisor):
         """
