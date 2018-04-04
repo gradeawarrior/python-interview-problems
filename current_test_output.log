@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 192 items
+collecting ... collected 221 items
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -20,6 +20,35 @@ tests/add_two_numbers_test.py::test_add_two_numbers[123-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[12-123] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[123-12] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[10000-10000000] PASSED
+tests/divide_two_ints_test.py::test_division[1-2-0] PASSED
+tests/divide_two_ints_test.py::test_division[2-2-1] PASSED
+tests/divide_two_ints_test.py::test_division[3-2-1] PASSED
+tests/divide_two_ints_test.py::test_division[4-2-2] PASSED
+tests/divide_two_ints_test.py::test_division[5-2-2] PASSED
+tests/divide_two_ints_test.py::test_division[6-2-3] PASSED
+tests/divide_two_ints_test.py::test_division[8-2-4] PASSED
+tests/divide_two_ints_test.py::test_division[15-3-5] PASSED
+tests/divide_two_ints_test.py::test_division[1--1--1] PASSED
+tests/divide_two_ints_test.py::test_division[-1--1-1] PASSED
+tests/divide_two_ints_test.py::test_division[2147483648-1-2147483647] PASSED
+tests/divide_two_ints_test.py::test_division[-2147483648--1-2147483647] PASSED
+tests/divide_two_ints_test.py::test_division[2147483648--1--2147483648] PASSED
+tests/divide_two_ints_test.py::test_division[-2147483648-1--2147483648] PASSED
+tests/divide_two_ints_test.py::test_division[2147483647-2-1073741823] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[1-2-0] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[2-2-1] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[3-2-1] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[4-2-2] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[5-2-2] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[6-2-3] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[8-2-4] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[15-3-5] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[1--1--1] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[-1--1-1] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[2147483648-1-2147483647] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[-2147483648--1-2147483647] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[2147483648--1--2147483648] PASSED
+tests/divide_two_ints_test.py::test_division_bruteforce[-2147483648-1--2147483648] PASSED
 tests/fibonacci_test.py::test_fibonacci_generator[0-None] PASSED
 tests/fibonacci_test.py::test_fibonacci_generator[1-0] PASSED
 tests/fibonacci_test.py::test_fibonacci_generator[2-1] PASSED
@@ -231,5 +260,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-===================== 1 failed, 191 passed in 1.03 seconds =====================
+===================== 1 failed, 220 passed in 1.23 seconds =====================
 make: *** [test] Error 1
