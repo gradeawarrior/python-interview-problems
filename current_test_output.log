@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 271 items
+collecting ... collected 296 items
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -244,6 +244,31 @@ tests/reverse_integer_test.py::test_add_two_numbers[1-1] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[12-21] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[123-321] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[1234567893-0] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[None-0] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[-0] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[I-1] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[II-2] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[III-3] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[IV-4] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[V-5] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[VI-6] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[VII-7] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[VIII-8] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[IX-9] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[X-10] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[XIV-14] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[XIX-19] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[XLIX-49] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[XL-40] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[L-50] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[XC-90] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[C-100] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[CD-400] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[D-500] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[CM-900] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[M-1000] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[MCD-1400] PASSED
+tests/roman_to_int_test.py::test_is_palindrome[MD-1500] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input0-5] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input1-4] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input2-1] PASSED
@@ -310,5 +335,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-===================== 1 failed, 270 passed in 1.20 seconds =====================
+===================== 1 failed, 295 passed in 1.29 seconds =====================
 make: *** [test] Error 1
