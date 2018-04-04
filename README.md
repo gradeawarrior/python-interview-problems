@@ -30,6 +30,8 @@ Here is an example output:
 
 	======================================================================================== 3 passed in 0.01 seconds ========================================================================================
 
+The current output of running `make test` is checked in as [current\_test\_output.log](./current_test_output.log) in the root directory.
+
 ## Documentation
 
 The projects homepage can be found [here](https://github.com/gradeawarrior/python-interview-problems).
