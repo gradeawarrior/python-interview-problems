@@ -1,15 +1,15 @@
 """
-Given a roman numeral, convert it to an integer.
+Given an integer, convert to a roman numeral.
 
 Input is guaranteed to be within the range from 1 to 3999.
 """
 
 import pytest
-from project.roman_to_int import Solution
+from project.int_to_roman import Solution
 
 
-@pytest.mark.parametrize("test_input, expected", [
-    (None, 0),
+@pytest.mark.parametrize("expected, test_input", [
+    ("", None),
     ("", 0),
     ("I", 1),
     ("II", 2),
@@ -29,12 +29,18 @@ from project.roman_to_int import Solution
     ("XC", 90),
     ("C", 100),
     ("CD", 400),
+    ("CDI", 401),
     ("D", 500),
+    ("DI", 501),
     ("CM", 900),
+    ("CMI", 901),
     ("M", 1000),
     ("MCD", 1400),
     ("MD", 1500),
+    ("MM", 2000),
+    ("MMM", 3000),
+    ("MMMCMXCIX", 3999),
     ])
 
-def test_roman_numeral_to_int(test_input, expected):
-    assert Solution().romanToInt(test_input) == expected
+def test_int_to_roman_numeral(test_input, expected):
+    assert Solution().intToRoman(test_input) == expected

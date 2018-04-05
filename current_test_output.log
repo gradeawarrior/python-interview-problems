@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 296 items
+collecting ... collected 327 items
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -82,6 +82,37 @@ tests/fibonacci_test.py::test_fibonacci_recursive[5-3] PASSED
 tests/fibonacci_test.py::test_fibonacci_recursive[6-5] PASSED
 tests/fibonacci_test.py::test_fibonacci_recursive[7-8] PASSED
 tests/fibonacci_test.py::test_fibonacci_recursive[8-13] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[-None] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[-0] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[I-1] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[II-2] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[III-3] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[IV-4] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[V-5] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[VI-6] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[VII-7] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[VIII-8] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[IX-9] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[X-10] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[XIV-14] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[XIX-19] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[XLIX-49] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[XL-40] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[L-50] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[XC-90] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[C-100] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[CD-400] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[CDI-401] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[D-500] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[DI-501] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[CM-900] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[CMI-901] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[M-1000] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[MCD-1400] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[MD-1500] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[MM-2000] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[MMM-3000] PASSED
+tests/int_to_roman_test.py::test_int_to_roman_numeral[MMMCMXCIX-3999] PASSED
 tests/is_linkedlist_palindrome_test.py::test_is_palindrome[None-True] PASSED
 tests/is_linkedlist_palindrome_test.py::test_is_palindrome[-True] PASSED
 tests/is_linkedlist_palindrome_test.py::test_is_palindrome[a-True] PASSED
@@ -244,31 +275,31 @@ tests/reverse_integer_test.py::test_add_two_numbers[1-1] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[12-21] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[123-321] PASSED
 tests/reverse_integer_test.py::test_add_two_numbers[1234567893-0] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[None-0] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[-0] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[I-1] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[II-2] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[III-3] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[IV-4] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[V-5] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[VI-6] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[VII-7] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[VIII-8] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[IX-9] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[X-10] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[XIV-14] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[XIX-19] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[XLIX-49] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[XL-40] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[L-50] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[XC-90] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[C-100] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[CD-400] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[D-500] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[CM-900] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[M-1000] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[MCD-1400] PASSED
-tests/roman_to_int_test.py::test_is_palindrome[MD-1500] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[None-0] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[-0] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[I-1] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[II-2] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[III-3] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[IV-4] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[V-5] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[VI-6] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[VII-7] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[VIII-8] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[IX-9] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[X-10] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[XIV-14] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[XIX-19] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[XLIX-49] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[XL-40] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[L-50] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[XC-90] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[C-100] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[CD-400] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[D-500] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[CM-900] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[M-1000] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[MCD-1400] PASSED
+tests/roman_to_int_test.py::test_roman_numeral_to_int[MD-1500] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input0-5] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input1-4] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution1[test_input2-1] PASSED
@@ -335,5 +366,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-===================== 1 failed, 295 passed in 1.29 seconds =====================
+===================== 1 failed, 326 passed in 1.36 seconds =====================
 make: *** [test] Error 1
