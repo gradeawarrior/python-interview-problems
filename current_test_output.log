@@ -20,6 +20,9 @@ tests/add_two_numbers_test.py::test_add_two_numbers[123-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[12-123] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[123-12] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[10000-10000000] PASSED
+tests/basic_string_manipulation_test.py::test_simplefunction[foo-foo] PASSED
+tests/basic_string_manipulation_test.py::test_simplefunction[jalsdflbvflnvfmdklsdfsdjkbd-jal sdf lbv fln vfm dkl sdf sdj kbd] PASSED
+tests/basic_string_manipulation_test.py::test_simplefunction[foobar-foo bar] PASSED
 tests/divide_two_ints_test.py::test_division[1-2-0] PASSED
 tests/divide_two_ints_test.py::test_division[2-2-1] PASSED
 tests/divide_two_ints_test.py::test_division[3-2-1] PASSED
@@ -321,9 +324,6 @@ tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input4-1] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input5-1] PASSED
 tests/smallest_possible_integer_test.py::test_smallest_possible_integer_solution3[test_input6-4] PASSED
-tests/tintri_screening_test.py::test_simplefunction[foo-foo] PASSED
-tests/tintri_screening_test.py::test_simplefunction[jalsdflbvflnvfmdklsdfsdjkbd-jal sdf lbv fln vfm dkl sdf sdj kbd] PASSED
-tests/tintri_screening_test.py::test_simplefunction[foobar-foo bar] PASSED
 tests/two_sums_bst_test.py::test_two_sums[test_input0-4-False] PASSED
 tests/two_sums_bst_test.py::test_two_sums[test_input1-5-True] PASSED
 tests/two_sums_bst_test.py::test_two_sums[test_input2-6-True] PASSED
@@ -366,5 +366,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-===================== 1 failed, 326 passed in 1.36 seconds =====================
+===================== 1 failed, 326 passed in 1.55 seconds =====================
 make: *** [test] Error 1

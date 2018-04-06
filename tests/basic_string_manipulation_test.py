@@ -6,7 +6,7 @@ Write a simple function that take a input string, add a space after every 3rd ch
 return the modified string
 """
 
-from project.tintri_screening import simple_function
+from project.basic_string_manipulation import simple_function
 import pytest
 
 
