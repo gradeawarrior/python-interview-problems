@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 327 items
+collecting ... collected 327 items / 1 skipped
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -366,5 +366,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-===================== 1 failed, 326 passed in 1.55 seconds =====================
+=============== 1 failed, 326 passed, 1 skipped in 1.35 seconds ================
 make: *** [test] Error 1
