@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 333 items / 1 skipped
+collecting ... collected 341 items / 1 skipped
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -233,9 +233,17 @@ tests/min_window_substring_test.py::test_min_window_substring[acbbaca-aba-baca] 
 tests/minheap_binary_tree_test.py::test_create_full_binary_tree[test_input0] PASSED
 tests/minheap_binary_tree_test.py::test_create_full_binary_tree[test_input1] PASSED
 tests/minheap_binary_tree_test.py::test_create_full_binary_tree[test_input2] PASSED
+tests/minheap_binary_tree_test.py::test_create_full_binary_tree[test_input3] PASSED
 tests/minheap_binary_tree_test.py::test_insert_number_into_tree[test_input0-1-expected_stree0-expected0] PASSED
 tests/minheap_binary_tree_test.py::test_insert_number_into_tree[test_input1-1-expected_stree1-expected1] PASSED
 tests/minheap_binary_tree_test.py::test_insert_number_into_tree[test_input2-1-expected_stree2-expected2] PASSED
+tests/minheap_binary_tree_test.py::test_insert_number_into_tree[test_input3-1-expected_stree3-expected3] PASSED
+tests/minheap_binary_tree_test.py::test_rebalance_tree[test_input0-1-expected0] PASSED
+tests/minheap_binary_tree_test.py::test_rebalance_tree[test_input1-1-expected1] PASSED
+tests/minheap_binary_tree_test.py::test_rebalance_tree[test_input2-1-expected2] PASSED
+tests/minheap_binary_tree_test.py::test_rebalance_tree[test_input3-1-expected3] PASSED
+tests/minheap_binary_tree_test.py::test_rebalance_tree[test_input4-5-expected4] PASSED
+tests/minheap_binary_tree_test.py::test_rebalance_tree[test_input5-7-expected5] PASSED
 tests/move_zeroes_test.py::test_move_zeroes[test_input0-expected0] PASSED
 tests/move_zeroes_test.py::test_move_zeroes[test_input1-expected1] PASSED
 tests/move_zeroes_test.py::test_move_zeroes[test_input2-expected2] PASSED
@@ -372,5 +380,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-=============== 1 failed, 332 passed, 1 skipped in 1.25 seconds ================
+=============== 1 failed, 340 passed, 1 skipped in 1.35 seconds ================
 make: *** [test] Error 1

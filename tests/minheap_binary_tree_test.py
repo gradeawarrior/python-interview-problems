@@ -18,6 +18,7 @@ from project.minheap_binary_tree import Heap
     ([]),
     ([2, 3, 4]),
     ([2, 3, 4, 5, 6]),
+    ([2, 4, 6, 8, 10]),
     ])
 
 def test_create_full_binary_tree(test_input):
@@ -33,6 +34,7 @@ def test_create_full_binary_tree(test_input):
     ([], 1, [1], [1]),
     ([2, 3, 4], 1, [3, 1], [2, 3, 4, 1]),
     ([2, 3, 4, 5, 6], 1, [4, 1], [2, 3, 4, 5, 6, 1]),
+    ([2, 4, 6, 8, 10], 1, [6, 1], [2, 4, 6, 8, 10, 1]),
     ])
 
 def test_insert_number_into_tree(test_input, number, expected_stree, expected):
@@ -46,6 +48,30 @@ def test_insert_number_into_tree(test_input, number, expected_stree, expected):
     actual_stree = subtree.to_list()
     assert isinstance(actual_stree, list)
     assert actual_stree == expected_stree
+
+    # Ensure that entire tree is correct and complete
+    actual = heap.to_list()
+    assert isinstance(actual, list)
+    assert actual == expected
+
+@pytest.mark.parametrize("test_input, number, expected", [
+    ([], 1, [1]),
+    ([2, 3, 4], 1, [1, 2, 4, 3]),
+    ([2, 3, 4, 5, 6], 1, [1, 3, 2, 5, 6, 4]),
+    ([2, 4, 6, 8, 10], 1, [1, 4, 2, 8, 10, 6]),
+    ([2, 4, 6, 8, 10], 5, [2, 4, 5, 8, 10, 6]),
+    ([2, 4, 6, 8, 10], 7, [2, 4, 6, 8, 10, 7]),
+    ])
+
+def test_rebalance_tree(test_input, number, expected):
+    """
+    Test that my logic for Heap.rebalance() is working as prescribed
+    """
+    heap = Heap(test_input)
+
+    # Ensure that subtree returned from calling Heap.insert_into_tree() is expected
+    subtree = heap.insert_into_tree(number)
+    heap.rebalance(subtree)
 
     # Ensure that entire tree is correct and complete
     actual = heap.to_list()

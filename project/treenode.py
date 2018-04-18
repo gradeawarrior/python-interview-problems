@@ -9,10 +9,11 @@ class TreeNode(object):
 """
 
 class TreeNode(object):
-    def __init__(self, x):
+    def __init__(self, x, parent=None):
         self.val = x
         self.left = None
         self.right = None
+        self.parent = parent
 
     def to_list(self):
         ret = []
