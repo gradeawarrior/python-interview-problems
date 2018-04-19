@@ -63,7 +63,7 @@ def test_insert_number_into_tree(test_input, number, expected_stree, expected):
     ([2, 4, 6, 8, 10], 7, [2, 4, 6, 8, 10, 7]),
     ])
 
-def test_rebalance_tree(test_input, number, expected):
+def test_rebalance_recursive_tree(test_input, number, expected):
     """
     Test that my logic for Heap.rebalance() is working as prescribed
     """
@@ -71,9 +71,52 @@ def test_rebalance_tree(test_input, number, expected):
 
     # Ensure that subtree returned from calling Heap.insert_into_tree() is expected
     subtree = heap.insert_into_tree(number)
-    heap.rebalance(subtree)
+    heap.rebalance_recursive(subtree)
 
     # Ensure that entire tree is correct and complete
     actual = heap.to_list()
     assert isinstance(actual, list)
     assert actual == expected
+
+@pytest.mark.parametrize("test_input, number, expected", [
+    ([], 1, [1]),
+    ([2, 3, 4], 1, [1, 2, 4, 3]),
+    ([2, 3, 4, 5, 6], 1, [1, 3, 2, 5, 6, 4]),
+    ([2, 4, 6, 8, 10], 1, [1, 4, 2, 8, 10, 6]),
+    ([2, 4, 6, 8, 10], 5, [2, 4, 5, 8, 10, 6]),
+    ([2, 4, 6, 8, 10], 7, [2, 4, 6, 8, 10, 7]),
+    ])
+
+def test_push(test_input, number, expected):
+    """
+    Test that my logic for Heap.push() is working as prescribed
+    """
+    heap = Heap(test_input)
+    heap.push(number)
+
+    # Ensure that entire tree is correct and complete
+    actual = heap.to_list()
+    assert isinstance(actual, list)
+    assert actual == expected
+
+@pytest.mark.parametrize("test_input, number, expected", [
+    ([1], 1, []),
+    ([1, 2, 4, 3], 1, [2, 3, 4]),
+    ([1, 3, 2, 5, 6, 4], 1, [2, 4, 3, 5, 6]),
+    ([1, 4, 2, 8, 10, 6], 1, [2, 6, 4, 8, 10]),
+    ([2, 4, 5, 8, 10, 6], 2, [4, 6, 5, 8, 10]),
+    ([2, 4, 6, 8, 10, 7], 2, [4, 7, 6, 8, 10]),
+    ])
+
+def test_pop(test_input, number, expected):
+    """
+    Test that my logic for Heap.pop() is working as prescribed
+    """
+    heap = Heap(test_input)
+    actual_number = heap.pop()
+    assert actual_number == number
+
+    # Ensure that entire tree is correct and complete
+    actual_heap = heap.to_list()
+    assert isinstance(actual_heap, list)
+    assert actual_heap == expected
