@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 363 items / 1 errors / 1 skipped
+collecting ... collected 369 items / 2 skipped
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -197,6 +197,12 @@ tests/longest_substring_test.py::test_longest_substring[banana-5] PASSED
 tests/longest_substring_test.py::test_longest_substring[banana bananana-7] PASSED
 tests/longest_substring_test.py::test_longest_substring[aac-3] PASSED
 tests/longest_substring_test.py::test_longest_substring[ccaabbb-5] PASSED
+tests/max_depth_btree_test.py::test_max_subarray_optimized[test_input0-3] PASSED
+tests/max_depth_btree_test.py::test_max_subarray_optimized[test_input1-1] PASSED
+tests/max_depth_btree_test.py::test_max_subarray_optimized[test_input2-2] PASSED
+tests/max_depth_btree_test.py::test_max_subarray_optimized[test_input3-2] PASSED
+tests/max_depth_btree_test.py::test_max_subarray_optimized[test_input4-2] PASSED
+tests/max_depth_btree_test.py::test_max_subarray_optimized[test_input5-3] PASSED
 tests/max_subarray_test.py::test_max_subarray_optimized[test_input0-6] PASSED
 tests/max_subarray_test.py::test_max_subarray_optimized[test_input1-4] PASSED
 tests/max_subarray_test.py::test_max_subarray_optimized[test_input2--5] PASSED
@@ -375,20 +381,6 @@ tests/two_sums_bst_test.py::test_two_sums[test_input11-20-False] PASSED
 tests/union_of_two_lists_test.py::test_union[test_input10-test_input20-expected0] PASSED
 tests/union_of_two_lists_test.py::test_union[test_input11-test_input21-expected1] PASSED
 
-==================================== ERRORS ====================================
-__________________ ERROR collecting tests/matrix_sum_test.py ___________________
-venv/lib/python2.7/site-packages/_pytest/python.py:610: in _importtestmodule
-    mod = self.fspath.pyimport(ensuresyspath=importmode)
-venv/lib/python2.7/site-packages/py/_path/local.py:650: in pyimport
-    __import__(modname)
-venv/lib/python2.7/site-packages/_pytest/assertion/rewrite.py:171: in load_module
-    py.builtin.exec_(co, mod.__dict__)
-tests/matrix_sum_test.py:2: in <module>
-    from project.matrix_sum import Solution
-E     File "/Users/psalas/Dev/git/python-interview-problems/project/matrix_sum.py", line 22
-E       return {item for item in l}
-E            ^
-E   SyntaxError: invalid syntax
 =================================== FAILURES ===================================
 ____________ test_min_window_substring[aaflslflsldkalskaaa-aaa-aaa] ____________
 
@@ -416,5 +408,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-=========== 1 failed, 362 passed, 1 skipped, 1 error in 4.24 seconds ===========
+=============== 1 failed, 368 passed, 2 skipped in 4.00 seconds ================
 make: *** [test] Error 1
