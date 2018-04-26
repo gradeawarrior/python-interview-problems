@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 377 items / 2 skipped
+collecting ... collected 392 items / 2 skipped
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -66,6 +66,21 @@ tests/divide_two_ints_test.py::test_division_bruteforce[2147483648-1-2147483647]
 tests/divide_two_ints_test.py::test_division_bruteforce[-2147483648--1-2147483647] PASSED
 tests/divide_two_ints_test.py::test_division_bruteforce[2147483648--1--2147483648] PASSED
 tests/divide_two_ints_test.py::test_division_bruteforce[-2147483648-1--2147483648] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A0-1-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A1-3-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A2-3-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A3-3-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A4-3-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A5-3-False] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A6-6-False] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A7-3-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A8-5-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A9-1-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A10-2-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A11-3-True] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A12-4-False] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A13-5-False] PASSED
+tests/equal_partitions_test.py::test_equal_partitions[A14-6-True] PASSED
 tests/fibonacci_test.py::test_fibonacci_generator[0-None] PASSED
 tests/fibonacci_test.py::test_fibonacci_generator[1-0] PASSED
 tests/fibonacci_test.py::test_fibonacci_generator[2-1] PASSED
@@ -416,5 +431,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-=============== 1 failed, 376 passed, 2 skipped in 4.37 seconds ================
+=============== 1 failed, 391 passed, 2 skipped in 4.02 seconds ================
 make: *** [test] Error 1
