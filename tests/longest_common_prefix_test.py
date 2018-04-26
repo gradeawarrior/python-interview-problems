@@ -31,7 +31,8 @@ from project.longest_common_prefix import Solution
     (["hello", "world"], ""),
     (["hello", "hi", "world"], ""),
     (["dog","racecar","car"], ""),
+    (["aca","cba"], ""),
     ])
 
-def test_is_palindrome(test_input, expected):
+def test_longest_common_prefix(test_input, expected):
     assert Solution().longestCommonPrefix(test_input) == expected

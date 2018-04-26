@@ -49,7 +49,7 @@ class Solution(object):
                     if substr == result[0:width]:
                         result = substr
                         break
-                elif width == 1:
+                if width == 1:
                     result = ""
                 else:
                     result = result[0:width]

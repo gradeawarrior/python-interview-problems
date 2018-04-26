@@ -9,7 +9,7 @@ platform darwin -- Python 2.7.10, pytest-2.8.7, py-1.4.31, pluggy-0.3.1 -- /User
 cachedir: .cache
 rootdir: /Users/psalas/Dev/git/python-interview-problems, inifile: 
 plugins: mock-0.11.0, httpbin-0.2.0, cov-2.2.1
-collecting ... collected 376 items / 2 skipped
+collecting ... collected 377 items / 2 skipped
 
 tests/add_two_numbers_test.py::test_add_two_numbers[1-1] PASSED
 tests/add_two_numbers_test.py::test_add_two_numbers[9-9] PASSED
@@ -153,13 +153,14 @@ tests/is_str_palindrome_test.py::test_is_palindrome[100-False] PASSED
 tests/is_str_palindrome_test.py::test_is_palindrome[123454321-True] PASSED
 tests/is_str_palindrome_test.py::test_is_palindrome[12345654321-True] PASSED
 tests/is_str_palindrome_test.py::test_is_palindrome[123456754321-False] PASSED
-tests/longest_common_prefix_test.py::test_is_palindrome[test_input0-] PASSED
-tests/longest_common_prefix_test.py::test_is_palindrome[test_input1-flower] PASSED
-tests/longest_common_prefix_test.py::test_is_palindrome[test_input2-fl] PASSED
-tests/longest_common_prefix_test.py::test_is_palindrome[test_input3-flow] PASSED
-tests/longest_common_prefix_test.py::test_is_palindrome[test_input4-] PASSED
-tests/longest_common_prefix_test.py::test_is_palindrome[test_input5-] PASSED
-tests/longest_common_prefix_test.py::test_is_palindrome[test_input6-] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input0-] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input1-flower] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input2-fl] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input3-flow] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input4-] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input5-] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input6-] PASSED
+tests/longest_common_prefix_test.py::test_longest_common_prefix[test_input7-] PASSED
 tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[babad-bab] PASSED
 tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[cbbd-bb] PASSED
 tests/longest_palindrome_substr_test.py::test_palindrome_brute_force[-] PASSED
@@ -415,5 +416,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-=============== 1 failed, 375 passed, 2 skipped in 3.84 seconds ================
+=============== 1 failed, 376 passed, 2 skipped in 4.37 seconds ================
 make: *** [test] Error 1
