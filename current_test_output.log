@@ -431,5 +431,5 @@ test_chars = 'aaa'
 test_string = 'aaflslflsldkalskaaa'
 
 tests/min_window_substring_test.py:15: AssertionError
-=============== 1 failed, 391 passed, 2 skipped in 4.02 seconds ================
+=============== 1 failed, 391 passed, 2 skipped in 3.81 seconds ================
 make: *** [test] Error 1
